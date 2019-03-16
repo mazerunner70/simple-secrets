@@ -1,4 +1,5 @@
 import argparse
+import sys
 
 
 class ConfigCli:
@@ -11,12 +12,12 @@ class ConfigCli:
         parser.add_argument('-l', '--list', help='list the envs and associated config files held so far')
         return parser
 
-    def process_args(self, args):
-
+    def process_args(self, parser, argsList):
+        args = parser.parse_args(argsList)
+        return args
 
     def parse(self):
         parser = self.defineparser()
-        args = parser.parse_args()
-        process_args(args)
+        argslist = self.process_args(parser, sys.argv)
 
 
