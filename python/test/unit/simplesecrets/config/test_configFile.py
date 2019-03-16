@@ -3,7 +3,9 @@ import tempfile
 import pathlib
 from config.configfile import ConfigFile
 
+
 class TestConfigFile(TestCase):
+
     def load_file_to_string(self, filepath):
         with open(filepath) as cf:
             linelist = cf.readlines()
@@ -23,7 +25,6 @@ class TestConfigFile(TestCase):
         self.assertTrue(file.exists())
         linelist = self.load_file_to_string(file)
         self.assertListEqual(['[envs.files]\n', '\n'], linelist )
-
 
     def test_load_configfile(self):
         file = self.create_fresh_config_file()
