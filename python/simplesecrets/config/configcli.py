@@ -1,6 +1,6 @@
 import argparse
 import sys
-from config.ssconfigfile import SsConfigFile
+from simplesecrets.config.ssconfigfile import SsConfigFile
 
 
 class ConfigCli:
@@ -27,6 +27,8 @@ class ConfigCli:
         parser = self.defineparser()
         argslist = self.process_args(parser, sys.argv)
 
+
     def store_args(self, args_dict):
         options = self.config_file.load_ss_config(self.configfile_path)
+
 

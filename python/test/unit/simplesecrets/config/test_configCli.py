@@ -1,5 +1,5 @@
 from unittest import TestCase
-from config.configcli import ConfigCli
+from simplesecrets.config.configcli import ConfigCli
 import io
 import sys
 
