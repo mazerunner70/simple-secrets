@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26ca7c44-8320-49c0-ae4a-b5e6f57f2e80" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vagrant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vagrant.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/simplesecrets/config/configcli.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/simplesecrets/config/configcli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/test/unit/simplesecrets/config/test_configCli.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/test/unit/simplesecrets/config/test_configCli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/test/unit/simplesecrets/config/test_ss_configFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/test/unit/simplesecrets/config/test_ss_configFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/simplesecrets/ui/table.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/simplesecrets/ui/table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/test/unit/simplesecrets/ui/test_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/test/unit/simplesecrets/ui/test_table.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python/simplesecrets/ui/table.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="26" column="96" lean-forward="true" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
+            <state relative-caret-position="-690">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -49,17 +47,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/lib/python3.6/enum.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
+            <state relative-caret-position="4830">
               <caret line="325" selection-start-line="325" selection-end-line="325" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python/test/unit/simplesecrets/ui/test_table.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="404">
+              <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -82,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python/test/unit/simplesecrets/config/test_configCli.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="390">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -141,16 +139,16 @@
         <option value="$PROJECT_DIR$/python/test/unit/simplesecrets/config/test_configCli.py" />
         <option value="$PROJECT_DIR$/python/test/unit/simplesecrets/config/test_ss_configFile.py" />
         <option value="$PROJECT_DIR$/python/simplesecrets/config/configcli.py" />
-        <option value="$PROJECT_DIR$/python/test/unit/simplesecrets/ui/test_table.py" />
         <option value="$PROJECT_DIR$/python/simplesecrets/ui/table.py" />
+        <option value="$PROJECT_DIR$/python/test/unit/simplesecrets/ui/test_table.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="163" />
-    <option name="y" value="364" />
+    <option name="x" value="116" />
+    <option name="y" value="69" />
     <option name="width" value="1613" />
-    <option name="height" value="836" />
+    <option name="height" value="895" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -248,7 +246,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/python/test/unit/simplesecrets/ui" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -347,58 +345,70 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test - 2019.03.29 at 14h 46m 53s.xml">
+    <history-entry file="Unittests_in_test - 2019.04.06 at 20h 37m 17s.xml">
       <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test - 2019.03.29 at 14h 47m 09s.xml">
+    <history-entry file="Unittests_in_test - 2019.04.06 at 20h 38m 56s.xml">
       <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test - 2019.03.29 at 14h 47m 37s.xml">
+    <history-entry file="Unittests_in_test - 2019.04.06 at 20h 40m 06s.xml">
       <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test - 2019.03.29 at 14h 48m 18s.xml">
+    <history-entry file="Unittests_in_test - 2019.04.06 at 20h 40m 25s.xml">
       <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test - 2019.03.29 at 14h 58m 56s.xml">
+    <history-entry file="Unittests_in_test - 2019.04.06 at 20h 42m 57s.xml">
       <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test - 2019.03.29 at 14h 58m 58s.xml">
+    <history-entry file="Unittests_in_test - 2019.04.06 at 20h 43m 55s.xml">
       <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test - 2019.03.29 at 15h 01m 20s.xml">
+    <history-entry file="Unittests_in_test - 2019.04.06 at 20h 52m 00s.xml">
       <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test - 2019.03.29 at 15h 02m 36s.xml">
+    <history-entry file="Unittests_in_test - 2019.04.06 at 20h 52m 41s.xml">
       <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test - 2019.03.29 at 15h 03m 27s.xml">
+    <history-entry file="Unittests_in_test - 2019.04.06 at 20h 52m 56s.xml">
       <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test - 2019.03.29 at 15h 19m 11s.xml">
+    <history-entry file="Unittests_in_test - 2019.04.06 at 20h 53m 37s.xml">
       <configuration name="Unittests in test" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="163" y="364" width="1613" height="836" extended-state="0" />
+    <frame x="116" y="69" width="1613" height="895" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2855346" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32863188" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32863188" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39915374" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.328125" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3984375" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32863188" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.328125" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3294271" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/simplesecrets/ui/table.py</url>
+          <line>77</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/python/test/unit/simplesecrets/config/config-file-test.py" />
@@ -436,12 +446,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/lib/python3.6/enum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4830">
+          <caret line="325" selection-start-line="325" selection-end-line="325" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/python/simplesecrets/config/configcli.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/test/unit/simplesecrets/config/test_configCli.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -462,39 +489,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/test/unit/simplesecrets/config/test_configCli.py">
+    <entry file="file://$PROJECT_DIR$/python/simplesecrets/ui/table.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="-690">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python3.6/enum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="325" selection-start-line="325" selection-end-line="325" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/test/unit/simplesecrets/ui/test_table.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="404">
+          <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/simplesecrets/ui/table.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="26" column="96" lean-forward="true" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
