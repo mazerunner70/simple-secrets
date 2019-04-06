@@ -1,7 +1,7 @@
 from unittest import TestCase
 import tempfile
 import pathlib
-from config.ssconfigfile import SsConfigFile
+from simplesecrets.config.ssconfigfile import SsConfigFile
 
 
 class TestConfigFile(TestCase):
