@@ -1,6 +1,7 @@
 import argparse
 import sys
 from simplesecrets.config.ssconfigfile import SsConfigFile
+from simplesecrets.ui.table import Table, Colour
 
 
 class ConfigCli:
@@ -13,22 +14,44 @@ class ConfigCli:
     def defineparser(self):
         parser = argparse.ArgumentParser(
             description='Manage secrets files',
-            epilog='Use with both -e, -f to register a new env. Then use just -e to rerun the same env file. Use just -f to avoid associating with env')
+            epilog='Use with both -e, -f to register a new env. Then use just -e to rerun the same env file. '+
+                   'Use just -f to avoid associating with env. Running with no params repeats last settings.')
         parser.add_argument('-f', '--file', help='specify the env config file location', nargs=1)
         parser.add_argument('-e', '--env', help='name the env that the config file applies to', nargs=1)
-        parser.add_argument('-l', '--list', help="list the envs and associated config files. Don't use with other options", action='store_true')
+        parser.add_argument('-l', '--list', help="list the envs and associated config files and exit. Overrides other options", action='store_true')
         return parser
 
     def process_args(self, parser, argsList):
         args_dict = parser.parse_args(argsList)
         return vars(args_dict) # return dict with params
 
-    def parse(self):
+    def execute(self):
         parser = self.defineparser()
         argslist = self.process_args(parser, sys.argv)
+        if argslist['list']:
+            self.list_envs()
+            sys.exit(0)
 
 
     def store_args(self, args_dict):
         options = self.config_file.load_ss_config(self.configfile_path)
+
+    def list_envs(self):
+        default_file = self.config_file.get_default_file()
+        if len(options) == 0 and default_file is None:
+            print('No envs or defaults mapped to config files, use options -e, -f together to register a config')
+            return
+        table = Table()
+        print('List of known env files (red highlights current default')
+        mapped_envs = self.get_mapped_envs()
+        colourmap = self.get_colourmap(mapped_envs, default_file)
+        text = table.colour_table(mapped_envs, ['Env name', 'config file'], None, colourmap)
+        print(text)
+        if default_file:
+            colour = Colour.RED if default_file in mapped_envs.values() else Colour.RESET
+            print
+
+
+
 
 

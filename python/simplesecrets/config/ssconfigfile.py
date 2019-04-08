@@ -1,5 +1,6 @@
 import configparser
 import pathlib
+from datetime import date
 
 #Singleton pattern - only one access to the config file at a time
 class SsConfigFile:
@@ -22,7 +23,11 @@ class SsConfigFile:
         config = configparser.ConfigParser()
         config[self.ENVS_FILES] ={}
         config[self.DEFAULT] ={self.LAST_CONFIG_FILE_USED: '', self.LAST_ENV_SPECIFIED: ''}
+        today = date.today()
         with open(ss_configfile_path, 'w') as configfile:
+            configfile.write('# Configuration for Simple Secrets\n')
+            configfile.write('# (https://github.com/mazerunner70/simple-secrets)\n')
+            configfile.write(f'# Created {today.strftime("%d/%m/%Y")}\n\n')
             config.write(configfile)
 
 
@@ -78,4 +83,13 @@ class SsConfigFile:
             for key, val in parser.items(section):
                 config[section][key] = val
         return config
+
+    def get_default_env(self):
+        return self.ss_config.get(self.DEFAULT, {}).get(self.LAST_ENV_SPECIFIED)
+
+    def get_default_file(self):
+        return self.ss_config.get(self.DEFAULT, {}).get(self.LAST_CONFIG_FILE_USED)
+
+    def get_mapped_envs(self):
+        return self.ss_config[self.ENVS_FILES]
 
