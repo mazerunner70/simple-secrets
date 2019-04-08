@@ -31,6 +31,7 @@ class ConfigCli:
         if argslist['list']:
             self.list_envs()
             sys.exit(0)
+        argslist += {'env_configfile' : self.get_envconfig_filename()}
 
 
     def store_args(self, args_dict):
@@ -38,18 +39,23 @@ class ConfigCli:
 
     def list_envs(self):
         default_file = self.config_file.get_default_file()
-        if len(options) == 0 and default_file is None:
+        mapped_envs = self.config_file.get_mapped_envs()
+        if len(mapped_envs) == 0 and default_file is None:
             print('No envs or defaults mapped to config files, use options -e, -f together to register a config')
             return
         table = Table()
         print('List of known env files (red highlights current default')
-        mapped_envs = self.get_mapped_envs()
         colourmap = self.get_colourmap(mapped_envs, default_file)
         text = table.colour_table(mapped_envs, ['Env name', 'config file'], None, colourmap)
         print(text)
         if default_file:
             colour = Colour.RED if default_file in mapped_envs.values() else Colour.RESET
-            print
+            print('\nDefault file: '+colour.value+default_file+Colour.RESET.value)
+
+    def get_envconfig_filename(self):
+        # assuming default file or env is set
+        return self.config_file.get_default_file() or self.config_file.get_mapped_envs()[self.config_file.get_default_env()]
+
 
 
 
