@@ -23,11 +23,11 @@ class SsConfigFile:
         config = configparser.ConfigParser()
         config[self.ENVS_FILES] ={}
         config[self.DEFAULT] ={self.LAST_CONFIG_FILE_USED: '', self.LAST_ENV_SPECIFIED: ''}
-        today = date.today()
+        self.today = date.today()
         with open(ss_configfile_path, 'w') as configfile:
             configfile.write('# Configuration for Simple Secrets\n')
             configfile.write('# (https://github.com/mazerunner70/simple-secrets)\n')
-            configfile.write(f'# Created {today.strftime("%d/%m/%Y")}\n\n')
+            configfile.write(f'# Created {self.today.strftime("%d/%m/%Y")}\n\n')
             config.write(configfile)
 
 
