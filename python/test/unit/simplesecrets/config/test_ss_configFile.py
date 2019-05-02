@@ -2,6 +2,7 @@ from unittest import TestCase
 import tempfile
 import pathlib
 from simplesecrets.config.ssconfigfile import SsConfigFile
+from datetime import date
 
 
 class TestConfigFile(TestCase):
@@ -11,8 +12,7 @@ class TestConfigFile(TestCase):
             linelist = cf.readlines()
         return linelist
 
-    def create_fresh_config_file(self):
-        configFile = SsConfigFile()
+    def create_fresh_config_file(self, configFile):
         dir = tempfile.gettempdir()
         file = pathlib.Path(dir).joinpath('tempfile.txt')
         if file.exists():
@@ -21,20 +21,27 @@ class TestConfigFile(TestCase):
         return file
 
     def test_create_empty_configfile(self):
-        file = self.create_fresh_config_file()
+        configFile = SsConfigFile()
+        file = self.create_fresh_config_file(configFile)
         self.assertTrue(file.exists())
         linelist = self.load_file_to_string(file)
+        today = configFile.today
         self.assertListEqual([
+                              '# Configuration for Simple Secrets\n',
+                              '# (https://github.com/mazerunner70/simple-secrets)\n',
+                              f'# Created {today.strftime("%d/%m/%Y")}\n',
+                              '\n',
                               '[envs.files]\n',
                               '\n',
                               '[Default]\n',
                               'last_config_file_used = \n',
                               'last_env_specified = \n',
                               '\n'
-                              ], linelist )
+                              ], linelist)
 
     def test_load_configfile(self):
-        file = self.create_fresh_config_file()
+        configFile = SsConfigFile()
+        file = self.create_fresh_config_file(configFile)
         configFile = SsConfigFile()
         config = configFile.load_ss_config(file)
         self.assertEqual(len(config), 2)
@@ -44,7 +51,8 @@ class TestConfigFile(TestCase):
         self.assertEqual(len(env_dict), 2)
 
     def test_update_config(self):
-        file = self.create_fresh_config_file()
+        configFile = SsConfigFile()
+        file = self.create_fresh_config_file(configFile)
         ss_config_file = SsConfigFile()
         ss_config = ss_config_file.load_ss_config(file)
         # Case 1 trying to specify neither env or file when no substitues are available in ss_config, error
